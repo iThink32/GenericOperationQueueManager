@@ -4,7 +4,7 @@ A collection of classes that help you use operation queues without any effort
 ## Usage:-
 
 
-### Creation of Operation :-
+### Creation of Operation with dependency :-
 
 Drag and drop the files in this repo into your project then create an instance of OperatioQueueManager and add operations like so:
 
