@@ -46,7 +46,7 @@ class OperationQueueManager {
     ///   - dictValues: a dictionary specifying the operations corresponding to its keys for
     ///   eg: "op1":OperationInstance
     /// - Returns:True if it is successfully able to add dependencies false if not
-    func addDependenenciesBasedOn(dependencyString:String,dictValues:[String:Operation]) -> Bool {
+    func addDependenenciesBasedOn(dependencyString:String,dictValues:[String:Operation],index:AnyHashable) -> Bool {
         // parse components
         let arrComponents = dependencyString.components(separatedBy: ",")
         for strComponent in arrComponents {
@@ -55,7 +55,8 @@ class OperationQueueManager {
                 return false
             }
             operationOne.addDependency(operationTwo)
-            self.operationQueue.addOperations([operationTwo,operationOne], waitUntilFinished: false)
+            self.addOperationToQueue(op: [operationOne,operationTwo], index: index)
+//            self.operationQueue.addOperations([operationTwo,operationOne], waitUntilFinished: false)
         }
         return true
     }
