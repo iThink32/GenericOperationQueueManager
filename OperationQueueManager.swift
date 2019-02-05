@@ -3,7 +3,6 @@
 //  TestOperationQueue
 //
 //  Created by N.A Shashank on 31/01/19.
-//  Copyright © 2019 Razorpay. All rights reserved.
 //
 
 import Foundation
