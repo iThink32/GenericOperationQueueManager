@@ -11,13 +11,13 @@ Drag and drop the files in this repo into your project then create an instance o
 ```
 let operationQueueManager = OperationQueueManager()
 
-let op1 = GenericOperation { [weak self] (completionClosure) in
+let op1 = GenericOperation { [weak self] (completionClosure) in.  // weak is very important
             // make an asynchronous call
             // call completion handler back to let the operation queue know that you have finished your operation
               completionClosure()
             })
         }
-        let op2 = GenericOperation { (completionClosure) in
+        let op2 = GenericOperation {[weak self] (completionClosure) in // weak is very important
             // make an asynchronous call
             // call completion handler back to let the operation queue know that you have finished your operation
                 completionClosure()
