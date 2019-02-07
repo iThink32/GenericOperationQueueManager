@@ -42,3 +42,8 @@ operationQueue.cancelOperation(index:IndexPath)
 where operationQueue is an instance of OperationQueue Manager
 
 
+## Note:-
+
+You can also use BlockOperations to achieve dependancy , ive purposely avoided it as it can be only used for synchronous operations which can easily achieved by using a custom synchronous queue.
+
+
