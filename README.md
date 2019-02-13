@@ -8,7 +8,7 @@ A collection of classes that help you use operation queues without any effort
 
 Drag and drop the files in this repo into your project then create an instance of OperatioQueueManager and add operations like so:
 
-```
+```swift
 let operationQueueManager = OperationQueueManager()
 
 let op1 = GenericOperation { [weak self] (completionClosure) in.  // weak is very important
@@ -36,7 +36,7 @@ Im using indexPath as an index to cancel operations later , you can use any obje
 
 ### Cancel an Operation:-
 
-```
+```swift
 operationQueue.cancelOperation(index:IndexPath)
 ```
 where operationQueue is an instance of OperationQueue Manager
